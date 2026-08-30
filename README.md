@@ -1693,7 +1693,7 @@ What belongs: real terminal user interfaces — interactive, keyboard-driven, dr
 
 <div align="center">
 
-<sub>Synced 2026-08-30 16:33 UTC from <a href="https://awesometui.com">awesometui.com</a> · 1,321 projects · Made for people who love the terminal.</sub>
+<sub>Synced 2026-08-30 16:36 UTC from <a href="https://awesometui.com">awesometui.com</a> · 1,321 projects · Made for people who love the terminal.</sub>
 
 <sub>To the extent possible under law, this list is released under <a href="LICENSE">CC0 1.0</a>. Project names and descriptions belong to their authors.</sub>
 

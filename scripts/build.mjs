@@ -111,15 +111,32 @@ const GROUPS = [
 // ---------------------------------------------------------------------------
 // Fetch
 // ---------------------------------------------------------------------------
+const HOSTS = ['https://awesometui.com', 'https://api.awesometui.com'];
+const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
+
+async function fetchPage(offset) {
+  let lastErr;
+  for (let attempt = 0; attempt < 6; attempt++) {
+    const host = HOSTS[attempt % HOSTS.length];
+    try {
+      const res = await fetch(`${host}/api/projects?limit=100&offset=${offset}`, {
+        headers: { 'user-agent': 'awesometui-readme-builder/1.0 (+https://github.com/alvinunreal/awesometui)' },
+      });
+      if (!res.ok) throw new Error(`API ${res.status} from ${host} at offset ${offset}`);
+      return await res.json();
+    } catch (err) {
+      lastErr = err;
+      await sleep(1000 * 2 ** attempt);
+    }
+  }
+  throw lastErr;
+}
+
 async function fetchAll() {
   const projects = [];
   let offset = 0;
   for (;;) {
-    const res = await fetch(`${API}?limit=100&offset=${offset}`, {
-      headers: { 'user-agent': 'awesometui-readme-builder/1.0 (+https://github.com/alvinunreal/awesometui)' },
-    });
-    if (!res.ok) throw new Error(`API ${res.status} at offset ${offset}`);
-    const body = await res.json();
+    const body = await fetchPage(offset);
     projects.push(...body.projects);
     if (!body.pagination?.hasMore) break;
     offset += 100;
