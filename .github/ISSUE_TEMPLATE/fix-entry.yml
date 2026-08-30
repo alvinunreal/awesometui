@@ -1,0 +1,28 @@
+name: Fix a listed project
+description: Wrong category, stale description, dead repo, or not actually a TUI.
+labels: [catalog]
+body:
+  - type: input
+    id: repo
+    attributes:
+      label: Repository URL
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: dropdown
+    id: kind
+    attributes:
+      label: What is wrong?
+      options:
+        - Wrong category or sub-collection
+        - Description is stale or misleading
+        - Repository is archived, deleted, or abandoned
+        - Not a terminal user interface
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: Details
+      description: What should it say or where should it live? Links help.

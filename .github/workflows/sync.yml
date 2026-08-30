@@ -1,0 +1,31 @@
+name: Sync catalog
+
+on:
+  schedule:
+    - cron: "17 5 * * 1" # Mondays 05:17 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Rebuild README and data snapshot
+        run: node scripts/build.mjs
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add README.md data/projects.json
+          if git diff --cached --quiet; then
+            echo "No changes."
+          else
+            git commit -m "chore: sync catalog from awesometui.com ($(date -u +%Y-%m-%d))"
+            git push
+          fi

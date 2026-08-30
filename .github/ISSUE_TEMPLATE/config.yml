@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Add a TUI to the catalog
+    url: https://awesometui.com/contribute
+    about: New projects are submitted on awesometui.com and land here on the next sync.
+  - name: Claim your project
+    url: https://awesometui.com/my-projects
+    about: Maintainers sign in with GitHub to correct metadata and add screenshots.
