@@ -10,7 +10,7 @@
 [![Projects](https://img.shields.io/badge/projects-1%2C395-b8860b?style=flat-square)](#contents)
 [![Categories](https://img.shields.io/badge/categories-19-3b7dd8?style=flat-square)](#contents)
 [![Deep dives](https://img.shields.io/badge/deep_dives-140-8a4fff?style=flat-square)](https://awesometui.com)
-[![Updated](https://img.shields.io/badge/synced-2026-10-26-2ea043?style=flat-square)](#how-this-list-is-built)
+[![Updated](https://img.shields.io/badge/synced-2026-11-02-2ea043?style=flat-square)](#how-this-list-is-built)
 [![License: CC0-1.0](https://img.shields.io/badge/license-CC0--1.0-lightgrey?style=flat-square)](LICENSE)
 
 **[awesometui.com](https://awesometui.com)** · **[Submit a tool](https://awesometui.com/contribute)** · **[Newsletter](https://awesometui.com/newsletter)** · **[RSS](https://awesometui.com/rss.xml)** · **[Contributing](#contributing)**
@@ -1767,7 +1767,7 @@ What belongs: real terminal user interfaces — interactive, keyboard-driven, dr
 
 <div align="center">
 
-<sub>Synced 2026-10-26 11:11 UTC from <a href="https://awesometui.com">awesometui.com</a> · 1,395 projects · Made for people who love the terminal.</sub>
+<sub>Synced 2026-11-02 13:34 UTC from <a href="https://awesometui.com">awesometui.com</a> · 1,395 projects · Made for people who love the terminal.</sub>
 
 <sub>To the extent possible under law, this list is released under <a href="LICENSE">CC0 1.0</a>. Project names and descriptions belong to their authors.</sub>
 
